@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aniruddh Chandratre — Résumé</title>
+<meta name="description" content="Senior Engineer, ML Infrastructure at Tesla AI. Cluster scheduling, defragmentation, and the data platform behind FSD, Optimus, and Digital Optimus.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23EFEEE8'/%3E%3Cg fill='%23177D74'%3E%3Crect x='2' y='2' width='3' height='3'/%3E%3Crect x='6' y='2' width='3' height='3'/%3E%3Crect x='10' y='2' width='3' height='3'/%3E%3Crect x='2' y='6' width='3' height='3'/%3E%3Crect x='6' y='6' width='3' height='3'/%3E%3Crect x='2' y='10' width='3' height='3'/%3E%3C/g%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#14161A;
+  --ink-2:#33383F;
+  --ink-3:#6E737A;
+  --rule:#C9C8BE;
+  --live:#0E5F58;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:#EFEEE8;color:var(--ink);
+  font:400 9.0pt/1.36 var(--sans);
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+
+.sheet{
+  width:8.5in;min-height:11in;margin:1.5rem auto;
+  background:#fff;padding:0.46in 0.58in 0.42in;
+  box-shadow:0 1px 3px rgba(0,0,0,.13),0 12px 34px rgba(0,0,0,.09);
+}
+
+/* ── header ─────────────────────────────────────────────── */
+.name{
+  font:600 17.5pt/1 var(--mono);letter-spacing:-.035em;
+  margin:0 0 .11in;color:var(--ink);
+}
+.contact{
+  font:400 8.1pt/1.45 var(--mono);letter-spacing:.005em;
+  color:var(--ink-2);margin:0 0 .06in;
+}
+.contact span{color:var(--rule);margin:0 .3em}
+.contact a{border-bottom:.5pt solid var(--rule)}
+.status{
+  font:500 8.0pt/1.45 var(--mono);letter-spacing:.02em;
+  color:var(--live);margin:0 0 .11in;
+}
+.summary{
+  font-size:8.9pt;line-height:1.42;color:var(--ink-2);
+  margin:0 0 .12in;padding:0 0 .12in;
+  border-bottom:1pt solid var(--ink);
+}
+.summary b{font-weight:600;color:var(--ink)}
+
+/* ── sections ───────────────────────────────────────────── */
+.sec{margin:0 0 .145in}
+.sec:last-child{margin-bottom:0}
+.sec__h{
+  font:600 7.9pt/1 var(--mono);letter-spacing:.17em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 .085in;
+  padding-bottom:.04in;border-bottom:.75pt solid var(--rule);
+}
+
+/* ── roles ──────────────────────────────────────────────── */
+.role{margin:0 0 .115in;break-inside:avoid}
+.role:last-child{margin-bottom:0}
+.role__top{display:flex;justify-content:space-between;align-items:baseline;gap:.8em}
+.role__t{font:600 9.5pt/1.28 var(--sans);margin:0;color:var(--ink)}
+.role__t em{font-style:normal;font-weight:400;color:var(--ink-2)}
+.role__w{
+  font:400 7.9pt/1.32 var(--mono);letter-spacing:.03em;
+  color:var(--ink-3);white-space:nowrap;
+}
+.role__meta{
+  font:400 8.05pt/1.38 var(--mono);letter-spacing:.03em;
+  color:var(--live);margin:.012in 0 .044in;
+}
+ul.pts{margin:0;padding:0;list-style:none}
+ul.pts li{
+  position:relative;padding-left:.128in;margin:0 0 .031in;
+  font-size:8.8pt;line-height:1.35;color:var(--ink-2);
+}
+ul.pts li:last-child{margin-bottom:0}
+ul.pts li::before{
+  content:'';position:absolute;left:0;top:.071in;
+  width:.044in;height:.044in;background:var(--live);
+}
+ul.pts b{font-weight:600;color:var(--ink)}
+ul.pts .m{font-family:var(--mono);font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;letter-spacing:-.01em;font-size:8.5pt}
+ul.pts q{font-style:italic;quotes:'“' '”'}
+
+/* ── compact rows ───────────────────────────────────────── */
+.row{
+  display:flex;justify-content:space-between;align-items:baseline;gap:.8em;
+  margin:0 0 .034in;font-size:8.8pt;line-height:1.34;color:var(--ink-2);
+}
+.row:last-child{margin-bottom:0}
+.row b{font-weight:600;color:var(--ink)}
+.row .when{font:400 8.4pt/1.4 var(--mono);letter-spacing:.03em;color:var(--ink-3);white-space:nowrap}
+.kv{font-size:8.7pt;line-height:1.4;color:var(--ink-2);margin:0 0 .03in}
+.kv:last-child{margin-bottom:0}
+.kv b{font:600 7.9pt/1.45 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+
+/* ── print ──────────────────────────────────────────────── */
+.print-hint{
+  max-width:8.5in;margin:0 auto 1.5rem;padding:0 .6in;
+  font:400 .78rem/1.5 var(--mono);color:var(--ink-3);
+}
+.print-hint a{color:var(--live);border-bottom:1px solid var(--rule)}
+
+/* ── narrow screens ─────────────────────────────────────── */
+/* The sheet is a fixed 8.5in so screen and print stay identical. Below that it
+   has to go fluid, or a phone gets a horizontally scrolling page. Print is
+   unaffected — these are screen-only rules. */
+@media screen and (max-width:8.9in){
+  .sheet{width:auto;min-height:0;margin:0;box-shadow:none;padding:1.15rem 1.15rem 1.4rem}
+  .print-hint{padding:0 1.15rem}
+}
+@media screen and (max-width:34rem){
+  body{font-size:10.5pt}
+  .name{font-size:19pt}
+  .contact,.status{font-size:9.4pt}
+  .summary{font-size:10.4pt}
+  .role__top,.row{flex-wrap:wrap;gap:.1rem .5rem}
+  .role__w,.row .when{white-space:normal}
+}
+
+@page{size:letter;margin:0}
+@media print{
+  body{background:#fff}
+  .sheet{width:auto;min-height:0;margin:0;box-shadow:none;padding:.44in .58in}
+  .print-hint{display:none}
+}
+</style>
+</head>
+<body>
+
+<article class="sheet">
+
+  <h1 class="name">Aniruddh Chandratre</h1>
+  <p class="contact">
+    Palo Alto, CA <span>·</span> +1 (480) 584-2618 <span>·</span>
+    <a href="mailto:achandratre22@gmail.com">achandratre22@gmail.com</a> <span>·</span>
+    <a href="https://github.com/C-Aniruddh">github.com/C-Aniruddh</a> <span>·</span>
+    <a href="https://scholar.google.com/citations?hl=en&amp;user=qesT3FMAAAAJ">Google&nbsp;Scholar</a>
+  </p>
+  <p class="status">O-1A (current) · EB-1A approved</p>
+
+  <p class="summary">
+    ML Infrastructure engineer. I own the internal data processing platform behind Tesla AI:
+    every data operation for <b>FSD</b>, <b>Optimus</b>, and <b>Digital Optimus</b> — running
+    <b>10B+ jobs</b> and <b>3,000+ years of compute</b> a month across a fleet of
+    <b>10 large GPU clusters</b>, roughly <b>250K H100-equivalent GPUs</b> commanding
+    <b>~$200M/month</b> of compute at list price. Re-architecture, scheduling, and cluster
+    efficiency work took throughput up <b>17×</b> and effective utilization to <b>98%</b>,
+    unlocking hundreds of millions of dollars of AI compute without buying hardware.
+  </p>
+
+  <section class="sec">
+    <h2 class="sec__h">Experience</h2>
+
+    <div class="role">
+      <div class="role__top">
+        <h3 class="role__t">Senior Engineer, ML Infrastructure <em>— Tesla AI</em></h3>
+        <span class="role__w">Feb 2024 – Present · Palo Alto, CA</span>
+      </div>
+      <p class="role__meta">Data platform &amp; GPU cluster efficiency · ~250K H100-equivalent GPUs (A100 · H100 · H200 · GB300 · MI325)</p>
+      <ul class="pts">
+        <li>
+          Own end to end the internal data processing platform running <span class="m">10B+ jobs</span>
+          and <span class="m">3,000+ years of compute</span> per month across <span class="m">10</span>
+          large GPU clusters — <b>all</b> data operations (acquisition, curation, mining, auto-labeling,
+          training, evaluation) for the FSD, Optimus, and Digital Optimus tracks.
+        </li>
+        <li>
+          Proposed and executed a ground-up re-architecture — lower-level core, distributed worker
+          coordination in place of centralized services, rebuilt memory model. Throughput
+          <span class="m">940M → 15B+</span> data items/month (<span class="m">17×</span>); maximum
+          dataset per run <span class="m">1M → 1B+ clips</span>, three orders of magnitude, making
+          dataset sizes that previously could not complete routine.
+        </li>
+        <li>
+          Built the cluster scheduling and live defragmentation layer that compacts allocations back
+          into contiguous topological blocks while clusters stay hot, across a heterogeneous fleet
+          normalized to H100 equivalents. Usable compute capacity rose <span class="m">24% → 88%</span>
+          and effective utilization now averages <span class="m">98%</span> fleet-wide.
+        </li>
+        <li>
+          Compute commanded by the platform grew <span class="m">~$5M → ~$200M per month</span> at
+          public cloud list price — <b>hundreds of millions of dollars of AI compute unlocked through
+          software rather than hardware</b> — plus an estimated <span class="m">$15M/year</span> in
+          recovered engineering productivity. Tesla's VP of AI Software credited the redesign with
+          <q>pushing Tesla's AI infrastructure to a new level</q>.
+        </li>
+        <li>
+          Built lineage tracking across artifacts, datasets, training jobs, and models, giving
+          multi-stage pipelines end-to-end provenance for the first time.
+        </li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role__top">
+        <h3 class="role__t">Software Engineer, Automation Software <em>— Tesla</em></h3>
+        <span class="role__w">Jan 2023 – Jan 2024 · Fremont, CA</span>
+      </div>
+      <p class="role__meta">Edge-to-cloud data infrastructure for the gigafactories</p>
+      <ul class="pts">
+        <li>
+          Designed and shipped an any-to-any edge-to-cloud data broker moving
+          <span class="m">10B+ manufacturing data points/day</span> — MQTT into InfluxDB, Kafka into
+          ClickHouse — in production across the Austin, Berlin, and Fremont gigafactories.
+        </li>
+        <li>
+          Wrote its low-level primitives from scratch when available options could not sustain the
+          required throughput on this storage profile: an
+          mmap-backed durable queue sustaining <span class="m">5M writes/s</span> on NFS-backed
+          Kubernetes volumes roughly <span class="m">100×</span> slower than an SSD, and a distributed
+          cache at <span class="m">10M entries/s</span> that deduplicated across
+          <span class="m">50</span> deployments and cut storage <span class="m">~80%</span>.
+        </li>
+        <li>
+          Built and operated <span class="m">20</span> high-availability services for factory insights
+          across global sites, owning the full deployment lifecycle.
+        </li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role__top">
+        <h3 class="role__t">Graduate Research Assistant <em>— ASU, Cyber-Physical Systems Lab</em></h3>
+        <span class="role__w">Jan 2021 – Dec 2022 · Tempe, AZ</span>
+      </div>
+      <ul class="pts">
+        <li>
+          DARPA <b>ARCOS</b> (Automated Rapid Certification of Software) with Lockheed Martin.
+          Co-authored PSY-TaLiRo, a falsification toolbox for cyber-physical systems still in use in
+          Lockheed's CertGATE pipeline. Ran the bare-metal Kubernetes cluster behind high-volume
+          formal-verification simulations.
+        </li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role__top">
+        <h3 class="role__t">Founding ML Engineer <em>— AfterShoot</em></h3>
+        <span class="role__w">Aug 2020 – Jan 2021 · Remote</span>
+      </div>
+      <ul class="pts">
+        <li>
+          Built the image-ranking model still at the product's core six years later. AfterShoot now serves
+          <span class="m">~250K</span> photographers, has processed <span class="m">9B+</span> images,
+          and is valued at <span class="m">$55M</span>.
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section class="sec">
+    <h2 class="sec__h">Education</h2>
+    <div class="row">
+      <span><b>M.S. Robotics &amp; Autonomous Systems (AI)</b> — Arizona State University · 4.0/4.0, Distinction Medal</span>
+      <span class="when">2022</span>
+    </div>
+    <div class="row">
+      <span><b>B.Tech Electronics &amp; Telecommunications</b> — NMIMS MPSTME, Mumbai · Dean's List</span>
+      <span class="when">2020</span>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec__h">Research, Awards &amp; Tooling</h2>
+    <p class="kv"><b>Publications</b> &nbsp;8 peer-reviewed papers · 174 citations · h-index 5 — HSCC, EMSOFT, FMICS, ARCH. First author, HSCC 2023: <i>Stealthy Attacks Formalized as STL Formulas for Falsification of CPS Security</i>.</p>
+    <p class="kv"><b>Awards</b> &nbsp;5× national hackathon winner in India — Smart India Hackathon 2019, Mastek Deep Blue (×2), IET Hack N Code, RAENG.</p>
+    <p class="kv"><b>Languages</b> &nbsp;Go, Python, C, C++, JavaScript/TypeScript, Java</p>
+    <p class="kv"><b>Systems</b> &nbsp;Slurm, Kubernetes, Helm, Docker, AWS, GCP, Prometheus, Grafana, Kafka, ClickHouse, InfluxDB, MQTT, SQL</p>
+  </section>
+
+</article>
+
+<p class="print-hint">
+  <a href="../">← aniruddhchandratre.com</a> &nbsp;·&nbsp;
+  <a href="../Aniruddh_Chandratre_Resume.pdf">Download PDF</a>
+</p>
+
+</body>
+</html>
