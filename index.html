@@ -139,33 +139,8 @@ a{color:inherit}
 }
 .sys__facts b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
 
-/* ─── impact table ───────────────────────────────────────────────────── */
-.tbl{width:100%;border-collapse:collapse;margin:0 0 1.1rem;font-size:.87rem}
-.tbl caption{text-align:left;caption-side:bottom;padding-top:.9rem;
-  font-size:.84rem;line-height:1.65;color:var(--ink-2);max-width:64ch}
-.tbl th,.tbl td{text-align:left;padding:.72rem .8rem .72rem 0;border-bottom:1px solid var(--rule);vertical-align:baseline}
-.tbl thead th{
-  font:600 .66rem/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;
-  color:var(--ink-3);padding-top:0;border-bottom-color:var(--rule-2);
-}
-.tbl tbody th{font-weight:400;color:var(--ink-2);padding-right:1.25rem}
-.tbl td{font:500 .87rem/1.45 var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;padding-right:1.25rem}
-.tbl .was{color:var(--ink-3)}
-.tbl .now{color:var(--live-ink);font-weight:600}
-.tbl .gain{font-family:var(--sans);font-weight:400;color:var(--ink-2);white-space:normal;padding-right:0}
-@media (max-width:44rem){
-  .tbl,.tbl caption,.tbl tbody,.tbl tr,.tbl th,.tbl td{display:block}
-  .tbl thead{display:none}
-  .tbl caption{caption-side:unset;padding-top:.9rem}
-  .tbl tr{border-bottom:1px solid var(--rule);padding:.85rem 0}
-  .tbl th,.tbl td{border:0;padding:0}
-  .tbl tbody th{font-weight:500;color:var(--ink);margin-bottom:.3rem}
-  .tbl td{display:inline;margin-right:.6rem}
-  .tbl .was::after{content:' →';color:var(--ink-3)}
-  .tbl .gain{display:block;margin-top:.35rem;font-size:.85rem}
-}
-
 /* ─── prior work ─────────────────────────────────────────────────────── */
+.prior,.sys{position:relative;padding-left:3.15rem}
 .prior{margin:0 0 2.1rem}
 .prior:last-child{margin-bottom:0}
 .prior__head{
@@ -173,8 +148,21 @@ a{color:inherit}
   margin:0 0 .45rem;
 }
 .prior__title{font:500 1rem/1.4 var(--mono);letter-spacing:-.015em;margin:0;color:var(--ink)}
+.prior__title a{border-bottom:1px solid var(--rule-2);text-decoration:none}
 .prior__when{font:400 .72rem/1.4 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
 .prior p{margin:0;max-width:62ch;color:var(--ink-2);font-size:.94rem}
+.org-logo{
+  position:absolute;left:0;top:.15rem;width:2rem;height:2rem;
+  object-fit:contain;filter:saturate(.85);
+}
+
+/* ─── publications ───────────────────────────────────────────────────── */
+.pubs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 2rem}
+.pubs li{padding:.75rem 0;border-bottom:1px solid var(--rule);font-size:.9rem;line-height:1.45}
+.pubs a{text-decoration:none;color:var(--ink);border-bottom:1px solid var(--rule-2)}
+.pubs a:hover{border-bottom-color:var(--live)}
+.pubs span{display:block;margin-top:.2rem;font:400 .7rem/1.4 var(--mono);color:var(--ink-3)}
+@media (max-width:44rem){.pubs{grid-template-columns:1fr}}
 
 /* ─── status ─────────────────────────────────────────────────────────── */
 .status{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1rem;padding:0;list-style:none}
@@ -260,8 +248,8 @@ a{color:inherit}
 <header class="wrap masthead">
   <h1 class="masthead__name">Aniruddh&nbsp;Chandratre</h1>
   <nav class="nav" aria-label="Primary">
-    <a href="#impact">Impact</a>
     <a href="#experience">Experience</a>
+    <a href="#publications">Publications</a>
     <a href="resume/" data-emph>Résumé</a>
     <a href="mailto:achandratre22@gmail.com">Email</a>
     <button class="tgl" id="tgl" type="button" aria-label="Toggle dark mode">Dark</button>
@@ -274,37 +262,9 @@ a{color:inherit}
     <h2 class="hero__display">ML infrastructure for <em>large-scale AI</em>.</h2>
     <p class="hero__lead">
       I build data platforms, schedulers, and cluster-efficiency systems for Tesla AI.
-      My work supports training and evaluation for <strong>FSD</strong>, <strong>Optimus</strong>,
+      My work supports data operations for <strong>FSD</strong>, <strong>Optimus</strong>,
       and <strong>Digital Optimus</strong> across large GPU fleets.
     </p>
-  </section>
-
-  <section class="wrap section" id="impact">
-    <h3 class="section__label">Selected impact</h3>
-    <div class="section__body">
-      <table class="tbl">
-        <thead>
-          <tr><th scope="col">Measure</th><th scope="col">Before</th><th scope="col">After</th><th scope="col">Result</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Usable compute capacity</th>
-            <td class="was">24%</td><td class="now">88%</td>
-            <td class="gain">More capacity from the existing fleet</td>
-          </tr>
-          <tr>
-            <th scope="row">Data items processed / month</th>
-            <td class="was">940M</td><td class="now">15B+</td>
-            <td class="gain">17× throughput</td>
-          </tr>
-          <tr>
-            <th scope="row">Dataset size per run</th>
-            <td class="was">1M clips</td><td class="now">1B+ clips</td>
-            <td class="gain">1,000× larger runs</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
   </section>
 
   <section class="wrap section" id="experience">
@@ -312,22 +272,23 @@ a{color:inherit}
     <div class="section__body">
 
       <article class="sys">
-        <h4 class="sys__name">The data engine</h4>
+        <img class="org-logo" src="assets/tesla.svg" alt="Tesla">
+        <h4 class="sys__name">Internal data processing platform</h4>
         <p class="sys__scope">Tesla AI · internal platform</p>
         <p>
-          Lead the platform used for data acquisition, curation, mining, auto-labeling, training,
-          and evaluation. Re-architected its core, worker coordination, and memory model to support
-          billion-clip datasets.
+          Own a large-scale MapReduce system used for data acquisition, curation, mining,
+          auto-labeling, training, and evaluation. It runs across 10 GPU clusters, processing
+          10B+ jobs per month and parallelizing an average of 3,000 years of compute.
         </p>
         <ul class="sys__facts">
           <li><b>10B</b> jobs / month</li>
           <li><b>3,000 yr</b> compute / month</li>
           <li><b>10</b> GPU clusters</li>
-          <li><b>15B+</b> data items / month</li>
         </ul>
       </article>
 
       <article class="sys">
+        <img class="org-logo" src="assets/tesla.svg" alt="">
         <h4 class="sys__name">Scheduling &amp; live defragmentation</h4>
         <p class="sys__scope">Tesla AI · GPU infrastructure</p>
         <p>
@@ -341,6 +302,20 @@ a{color:inherit}
         </ul>
       </article>
 
+      <article class="sys">
+        <img class="org-logo" src="assets/tesla.svg" alt="">
+        <h4 class="sys__name">Internet-scale data curation</h4>
+        <p class="sys__scope">Tesla AI · FSD · Optimus · Digital Optimus</p>
+        <p>
+          Build pipelines that turn large-scale data acquisition into training-ready datasets,
+          with lineage across artifacts, datasets, training jobs, and models.
+        </p>
+        <ul class="sys__facts">
+          <li><b>1B+</b> clips per run</li>
+          <li><b>end-to-end</b> acquisition → training set</li>
+        </ul>
+      </article>
+
     </div>
   </section>
 
@@ -349,6 +324,7 @@ a{color:inherit}
     <div class="section__body">
 
       <article class="prior">
+        <img class="org-logo" src="assets/tesla.svg" alt="Tesla">
         <div class="prior__head">
           <h4 class="prior__title">Core data infrastructure — Tesla Manufacturing</h4>
           <span class="prior__when">2023 – 2024</span>
@@ -361,6 +337,7 @@ a{color:inherit}
       </article>
 
       <article class="prior">
+        <img class="org-logo" src="assets/asu.ico" alt="Arizona State University">
         <div class="prior__head">
           <h4 class="prior__title">Graduate research — ASU, DARPA ARCOS</h4>
           <span class="prior__when">2021 – 2022</span>
@@ -372,8 +349,9 @@ a{color:inherit}
       </article>
 
       <article class="prior">
+        <img class="org-logo" src="assets/aftershoot.ico" alt="Aftershoot">
         <div class="prior__head">
-          <h4 class="prior__title">Founding engineer — AfterShoot</h4>
+          <h4 class="prior__title">Founding engineer — <a href="https://aftershoot.com/">Aftershoot</a></h4>
           <span class="prior__when">2020 – 2021</span>
         </div>
         <p>
@@ -385,14 +363,27 @@ a{color:inherit}
     </div>
   </section>
 
+  <section class="wrap section" id="publications">
+    <h3 class="section__label">Publications</h3>
+    <div class="section__body">
+      <ul class="pubs">
+        <li><a href="https://scholar.google.com/scholar?q=%22Stealthy+attacks+formalized+as+STL+formulas+for+Falsification+of+CPS+Security%22">Stealthy attacks formalized as STL formulas for Falsification of CPS Security</a><span>HSCC · 2023</span></li>
+        <li><a href="https://scholar.google.com/scholar?q=%22Demo+Abstract%3A+Analysing+CPS+Security+with+Falsification+on+the+Microsoft+Flight+Simulator%22">Analysing CPS Security with Falsification on the Microsoft Flight Simulator</a><span>HSCC · 2023</span></li>
+        <li><a href="https://scholar.google.com/scholar?q=%22ARCH-COMP+2022+Category+Report%3A+Falsification+with+Unbounded+Resources%22">ARCH-COMP 2022: Falsification with Unbounded Resources</a><span>ARCH · 2022</span></li>
+        <li><a href="https://scholar.google.com/scholar?q=%22Traffic+Accident+Reconstruction+Using+Monocular+Dashcam+Videos%22">Traffic Accident Reconstruction Using Monocular Dashcam Videos</a><span>2022</span></li>
+        <li><a href="https://scholar.google.com/scholar?q=%22PSY-TaLiRo%3A+A+Python+Toolbox+for+Search-Based+Test+Generation+for+Cyber-Physical+Systems%22">PSY-TaLiRo: A Python Toolbox for Search-Based Test Generation for Cyber-Physical Systems</a><span>FMICS · 2021</span></li>
+        <li><a href="https://scholar.google.com/scholar?q=%22ARCH-COMP+2021+Category+Report%3A+Falsification+with+Validation+of+Results%22">ARCH-COMP 2021: Falsification with Validation of Results</a><span>ARCH · 2021</span></li>
+        <li><a href="https://scholar.google.com/scholar?q=%22Towards+assurance+case+evidence+generation+through+search+based+testing%22">Towards assurance case evidence generation through search based testing</a><span>EMSOFT · 2021</span></li>
+        <li><a href="https://scholar.google.com/scholar?q=%22Optical+Character+Recognition+For+Handwritten+Forms+With+Dynamic+Layout%22">Optical Character Recognition for Handwritten Forms with Dynamic Layout</a><span>iCATccT · 2018</span></li>
+      </ul>
+    </div>
+  </section>
+
   <section class="wrap section" id="status">
     <h3 class="section__label">Contact</h3>
     <div class="section__body">
-      <ul class="status">
-        <li>O-1A · current</li>
-        <li>EB-1A · approved</li>
-      </ul>
       <p><a class="cta" href="mailto:achandratre22@gmail.com">achandratre22@gmail.com</a></p>
+      <p><a class="cta" href="https://www.linkedin.com/in/aniruddhchandratre">LinkedIn</a></p>
     </div>
   </section>
 </main>
@@ -403,6 +394,7 @@ a{color:inherit}
     <a href="mailto:achandratre22@gmail.com">achandratre22@gmail.com</a>
     <a href="https://github.com/C-Aniruddh">GitHub</a>
     <a href="https://scholar.google.com/citations?hl=en&amp;user=qesT3FMAAAAJ">Scholar</a>
+    <a href="https://www.linkedin.com/in/aniruddhchandratre">LinkedIn</a>
     <a href="resume/">Résumé</a>
   </span>
 </footer>
