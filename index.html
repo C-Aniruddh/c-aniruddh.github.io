@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aniruddh Chandratre — ML Infrastructure</title>
-<meta name="description" content="Senior Engineer, ML Infrastructure at Tesla AI. I keep large fleets of compute busy — schedulers, defragmentation, and the data engine behind FSD, Optimus, and Digital Optimus.">
+<meta name="description" content="Aniruddh Chandratre is a senior ML infrastructure engineer working on data platforms, GPU scheduling, and cluster efficiency at Tesla AI.">
 <meta name="color-scheme" content="light">
 
 <meta property="og:title" content="Aniruddh Chandratre — ML Infrastructure">
-<meta property="og:description" content="I keep large fleets of compute busy. Schedulers, defragmentation, and the data engine behind every AI program at Tesla.">
+<meta property="og:description" content="Senior ML infrastructure engineer working on data platforms, GPU scheduling, and cluster efficiency.">
 <meta property="og:type" content="website">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23F5EFE7'/%3E%3Cg fill='%238E5DB0'%3E%3Crect x='2' y='2' width='3' height='3'/%3E%3Crect x='6' y='2' width='3' height='3'/%3E%3Crect x='10' y='2' width='3' height='3'/%3E%3Crect x='2' y='6' width='3' height='3'/%3E%3Crect x='6' y='6' width='3' height='3'/%3E%3Crect x='2' y='10' width='3' height='3'/%3E%3C/g%3E%3C/svg%3E">
@@ -260,9 +260,8 @@ a{color:inherit}
 <header class="wrap masthead">
   <h1 class="masthead__name">Aniruddh&nbsp;Chandratre</h1>
   <nav class="nav" aria-label="Primary">
-    <a href="#now">Now</a>
     <a href="#impact">Impact</a>
-    <a href="#before">Before</a>
+    <a href="#experience">Experience</a>
     <a href="resume/" data-emph>Résumé</a>
     <a href="mailto:achandratre22@gmail.com">Email</a>
     <button class="tgl" id="tgl" type="button" aria-label="Toggle dark mode">Dark</button>
@@ -272,101 +271,68 @@ a{color:inherit}
 <main>
   <section class="wrap hero">
     <p class="hero__role">Senior Engineer, ML Infrastructure · Tesla AI · Palo Alto</p>
-    <h2 class="hero__display">I keep large fleets of compute <em>busy</em>.</h2>
+    <h2 class="hero__display">ML infrastructure for <em>large-scale AI</em>.</h2>
     <p class="hero__lead">
-      Standing up a fleet this size is hard, and it is only half the problem. The other half is
-      making sure jobs can actually land on it — at scale, accelerators go idle behind fragmented
-      placement, stalled pipelines, and data that arrives too late to use. I build the software
-      in between.
-    </p>
-    <p class="hero__lead">
-      Right now that means the data engine behind Tesla AI: the platform every training and
-      evaluation pipeline for <strong>FSD</strong>, <strong>Optimus</strong>, and
-      <strong>Digital Optimus</strong> runs through, across hundreds of thousands of GPUs.
-      What that has been worth is below, in numbers someone else had to sign for.
+      I build data platforms, schedulers, and cluster-efficiency systems for Tesla AI.
+      My work supports training and evaluation for <strong>FSD</strong>, <strong>Optimus</strong>,
+      and <strong>Digital Optimus</strong> across large GPU fleets.
     </p>
   </section>
 
   <section class="wrap section" id="impact">
-    <h3 class="section__label">What it was worth</h3>
+    <h3 class="section__label">Selected impact</h3>
     <div class="section__body">
       <table class="tbl">
-        <caption>
-          Every figure here is attested in signed statements from Tesla's VP of AI Software and
-          my direct manager, filed with USCIS in support of an EB-1A petition — so they were
-          documented under oath and examined by an independent adjudicator, not just asserted here.
-        </caption>
         <thead>
-          <tr><th scope="col">Measure</th><th scope="col">Was</th><th scope="col">Is</th><th scope="col">What that bought</th></tr>
+          <tr><th scope="col">Measure</th><th scope="col">Before</th><th scope="col">After</th><th scope="col">Result</th></tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">Usable compute capacity</th>
             <td class="was">24%</td><td class="now">88%</td>
-            <td class="gain">Hundreds of millions of dollars of AI compute, with no new hardware</td>
+            <td class="gain">More capacity from the existing fleet</td>
           </tr>
           <tr>
             <th scope="row">Data items processed / month</th>
             <td class="was">940M</td><td class="now">15B+</td>
-            <td class="gain">17× throughput through the same fleet</td>
+            <td class="gain">17× throughput</td>
           </tr>
           <tr>
             <th scope="row">Dataset size per run</th>
             <td class="was">1M clips</td><td class="now">1B+ clips</td>
-            <td class="gain">Three orders of magnitude — pipelines that simply could not run, now routine</td>
-          </tr>
-          <tr>
-            <th scope="row">Compute commanded</th>
-            <td class="was">$5M/mo</td><td class="now">~$200M/mo</td>
-            <td class="gain">At public cloud list price</td>
-          </tr>
-          <tr>
-            <th scope="row">Engineering productivity</th>
-            <td class="was">—</td><td class="now">$15M/yr</td>
-            <td class="gain">Engineering time returned that used to go to waiting and reruns</td>
+            <td class="gain">1,000× larger runs</td>
           </tr>
         </tbody>
       </table>
-      <p>
-        Compute is not the bottleneck in AI research. Getting to the compute is. Every number
-        above is the same trade: better software, same hardware, faster iteration for the people
-        training models.
-      </p>
     </div>
   </section>
 
-  <section class="wrap section" id="now">
-    <h3 class="section__label">What I run</h3>
+  <section class="wrap section" id="experience">
+    <h3 class="section__label">Current work</h3>
     <div class="section__body">
 
       <article class="sys">
         <h4 class="sys__name">The data engine</h4>
-        <p class="sys__scope">Internal platform · fleet-wide · owner</p>
+        <p class="sys__scope">Tesla AI · internal platform</p>
         <p>
-          Every data operation inside Tesla AI lands here — acquisition, curation, mining,
-          auto-labeling, training, evaluation. It runs over 10 billion jobs and 3,000 years of
-          compute a month across ten large GPU clusters, commanding roughly $200M/month measured
-          at public cloud list prices. I rewrote it from the ground up: a lower-level core, distributed
-          workers coordinating without a central service, and a memory model that survives
-          datasets three orders of magnitude past what the original could hold.
+          Lead the platform used for data acquisition, curation, mining, auto-labeling, training,
+          and evaluation. Re-architected its core, worker coordination, and memory model to support
+          billion-clip datasets.
         </p>
         <ul class="sys__facts">
           <li><b>10B</b> jobs / month</li>
           <li><b>3,000 yr</b> compute / month</li>
           <li><b>10</b> GPU clusters</li>
-          <li><b>3</b> AI programs, all data ops</li>
+          <li><b>15B+</b> data items / month</li>
         </ul>
       </article>
 
       <article class="sys">
         <h4 class="sys__name">Scheduling &amp; live defragmentation</h4>
-        <p class="sys__scope">cortex · cortex2 · GB300 · fleet-wide</p>
+        <p class="sys__scope">Tesla AI · GPU infrastructure</p>
         <p>
-          Big training jobs need contiguous topology, and a fleet left alone fragments until the
-          scheduler can't place a job the hardware could obviously run. I build the placement and
-          live-compaction layer that moves allocations back into clean blocks while the cluster
-          stays hot — across heterogeneous racks, normalized to H100 equivalents. Effective
-          utilization now averages 98% across the fleet, up from 24% usable capacity before.
+          Built placement and live-defragmentation systems that compact allocations into contiguous
+          topology while clusters remain online. The scheduler operates across a heterogeneous GPU fleet.
         </p>
         <ul class="sys__facts">
           <li><b>250K+</b> H100-equivalent GPUs</li>
@@ -375,25 +341,11 @@ a{color:inherit}
         </ul>
       </article>
 
-      <article class="sys">
-        <h4 class="sys__name">Internet-scale data acquisition</h4>
-        <p class="sys__scope">FSD · Optimus · Digital Optimus</p>
-        <p>
-          The pipelines that turn raw collection into training-ready corpora, for every program
-          in the org. A model's quality ceiling is set long before a GPU is ever allocated.
-        </p>
-        <ul class="sys__facts">
-          <li><b>1B+</b> clips per run</li>
-          <li><b>15B+</b> data items / month</li>
-          <li><b>end-to-end</b> capture → training set</li>
-        </ul>
-      </article>
-
     </div>
   </section>
 
   <section class="wrap section" id="before">
-    <h3 class="section__label">Before that</h3>
+    <h3 class="section__label">Earlier experience</h3>
     <div class="section__body">
 
       <article class="prior">
@@ -402,12 +354,9 @@ a{color:inherit}
           <span class="prior__when">2023 – 2024</span>
         </div>
         <p>
-          Built the data backbone for the gigafactories: an any-to-any broker sinking anything
-          into anything — MQTT into InfluxDB, Kafka into ClickHouse. Underneath it, an
-          mmap-backed durable queue sustaining 5M writes/second on NFS-backed Kubernetes volumes
-          100× slower than an SSD, and a distributed cache at 10M entries/second that
-          deduplicated across 50 deployments and cut storage by 80%. Over 10 billion
-          manufacturing data points a day, in production in Austin, Berlin, and Fremont.
+          Built an edge-to-cloud data broker processing 10B+ manufacturing data points per day
+          across Austin, Berlin, and Fremont. Developed a 5M writes/second durable queue and a
+          distributed cache that cut storage by 80% across 50 deployments.
         </p>
       </article>
 
@@ -417,11 +366,8 @@ a{color:inherit}
           <span class="prior__when">2021 – 2022</span>
         </div>
         <p>
-          Formal verification and falsification for autonomous systems, with Lockheed Martin
-          under DARPA's Automated Rapid Certification of Software program. Co-authored
-          PSY-TaLiRo, still in use in the CertGATE certification pipeline. Eight publications,
-          174 citations; first-author work at HSCC 2023 formalizing stealthy attacks on
-          cyber-physical systems as temporal logic.
+          Researched formal verification for autonomous systems under DARPA ARCOS with Lockheed
+          Martin. Co-authored PSY-TaLiRo and published eight peer-reviewed papers.
         </p>
       </article>
 
@@ -431,9 +377,8 @@ a{color:inherit}
           <span class="prior__when">2020 – 2021</span>
         </div>
         <p>
-          Built the image ranking model that is still the product's core six years later. Now
-          used by ~250,000 professional photographers, nine billion images processed, $55M
-          valuation.
+          Built the image-ranking model at the core of AfterShoot's photo-culling product,
+          now used by approximately 250,000 photographers.
         </p>
       </article>
 
@@ -441,23 +386,12 @@ a{color:inherit}
   </section>
 
   <section class="wrap section" id="status">
-    <h3 class="section__label">The through-line</h3>
+    <h3 class="section__label">Contact</h3>
     <div class="section__body">
-      <p>
-        Every system on this page is the same bet: the thing that decides how fast a team can move
-        is the distance between having an idea and having a result. Factory telemetry, a
-        scheduler, a data engine — different layers, one problem. Make the loop tighter and
-        everything downstream of it gets better for free, without anyone having to buy more
-        hardware or work more hours.
-      </p>
       <ul class="status">
         <li>O-1A · current</li>
         <li>EB-1A · approved</li>
       </ul>
-      <p>
-        Both are extraordinary-ability classifications, granted on the record of the work above —
-        the petitions were built on these systems and reviewed against them.
-      </p>
       <p><a class="cta" href="mailto:achandratre22@gmail.com">achandratre22@gmail.com</a></p>
     </div>
   </section>
